@@ -1,0 +1,32 @@
+[project]
+name = "rag-my-disk"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=1.2.7",
+    "langchain-chroma>=1.1.0",
+    "langchain-community>=0.4.1",
+    "langchain-huggingface>=1.2.0",
+    "loguru>=0.7.3",
+    "platformdirs>=4.5.1",
+    "sentence-transformers>=5.2.2",
+    "typer>=0.21.1",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+logger-objects = ["loguru.logger"]
+select = ["ALL"]
+ignore = [
+  "COM812",  # missing-trailing-comma
+  "T20",  # flake8-print
+  "ERA",  # eradicate
+  "D",  # docstrings
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
